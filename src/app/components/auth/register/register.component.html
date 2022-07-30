@@ -1,1 +1,40 @@
-<p>register works!</p>
+<div class="signup-container">
+  <div class="login-image"></div>
+  <form [formGroup]="signupInfo" (ngSubmit)="createUserAccount()" class="signup-form">
+
+    <mat-form-field  appearance="outline" class="form-field">
+      <mat-label>Name</mat-label>
+      <input formControlName="fullname" class="input" type="text" matInput placeholder="Enter fullname..."
+      />
+      <mat-icon class="icon" matSuffix>person</mat-icon>
+      <mat-hint>enter your fullname</mat-hint>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="form-field">
+      <mat-label>contact number</mat-label>
+      <input formControlName="contact" class="input" type="tel" matInput placeholder="Enter fullname..."
+      />
+      <mat-icon class="icon" matSuffix>phone</mat-icon>
+      <mat-hint>add country code (+233...)</mat-hint>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="form-field">
+      <mat-label>Email</mat-label>
+      <input formControlName="email" class="input" type="email" matInput placeholder="Enter email..."
+      />
+      <mat-icon class="icon" matSuffix>mail</mat-icon>
+      <mat-hint>example@mail.com</mat-hint>
+    </mat-form-field>
+
+    <mat-form-field class="form-field" appearance="outline">
+      <mat-label>password</mat-label>
+      <input formControlName="password" class="input" type="password" matInput placeholder="Enter password..."
+      />
+      <mat-icon class="icon" matSuffix>lock</mat-icon>
+      <mat-hint>password should be at least 6 characters</mat-hint>
+    </mat-form-field>
+
+    <button type="submit" mat-button class="signup-button">CREATE ACCOUNT</button>
+    <p class="prompt">Already have an account? <a routerLink="" class="signup-text">login</a>  here</p>
+  </form>
+</div>
