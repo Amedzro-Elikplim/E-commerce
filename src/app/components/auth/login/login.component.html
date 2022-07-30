@@ -1,21 +1,27 @@
 <div class="login-container">
-    <div class="login-image"></div>
-    <form class="login-form">
-        <app-form-field
-        [label]="'Email'"
-        [type]="'email'"
-        [placeholder]="'Enter email...'"
-        [icon]="'email'"
-        [hint]="'example@mail.com'"
-      ></app-form-field>
-      <app-form-field
-      [label]="'Password'"
-      [type]="'password'"
-      [placeholder]="'Enter password...'"
-      [icon]="'lock'"
-      [hint]="'Should be at least 6 characters'"
-      ></app-form-field>
-      <mat-checkbox class="checkbox">Remember me</mat-checkbox>
-      <button mat-button class="login-button">LOGIN</button>
-    </form>
+  <div class="login-image"></div>
+  <form [formGroup]="loginInfo" (ngSubmit)="signUserIn()"  class="login-form">
+
+    <mat-form-field appearance="outline" class="form-field">
+      <mat-label>Email</mat-label>
+      <input formControlName="email" class="input" type="email" matInput placeholder="Enter email..."
+      />
+      <mat-icon class="icon" matSuffix>mail</mat-icon>
+      <mat-hint>example@mail.com</mat-hint>
+    </mat-form-field>
+
+    <mat-form-field class="form-field" appearance="outline">
+      <mat-label>password</mat-label>
+      <input formControlName="password" class="input" type="password" matInput placeholder="Enter password..."
+      />
+      <mat-icon class="icon" matSuffix>lock</mat-icon>
+      <mat-hint>password should be at least 6 characters</mat-hint>
+    </mat-form-field>
+
+
+
+    <mat-checkbox class="checkbox">Remember me</mat-checkbox>
+    <button type="submit" mat-button class="login-button">Login</button>
+    <p class="prompt">Don't have an account? <a routerLink="/register" class="signup-text">Signup</a>  here</p>
+  </form>
 </div>
