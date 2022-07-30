@@ -1,3 +1,4 @@
+
 .login-container {
     display: flex;
 }
@@ -30,4 +31,27 @@
   color: white;
   width: 150px;
   margin-top: 50px;
+}
+
+.form-field {
+    width: 25vw;
+    margin: 10px;
+}
+
+.input {
+   width: 100%;
+} 
+
+.icon {
+    color: rgb(111, 13, 238);
+}
+
+.prompt {
+    margin: 10px;
+}
+
+.signup-text {
+    color: rgb(111, 13, 238);
+    cursor: pointer;
+    text-decoration: none;
 }
