@@ -8,8 +8,10 @@ import { MatButtonModule } from '@angular/material/button';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AppRoutingModule } from '../app-routing.module';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { HomepageComponent } from './pages/homepage/homepage.component';
+import { CheckoutPageComponent } from './pages/checkout-page/checkout-page.component';
 @NgModule({
-  declarations: [LoginComponent, RegisterComponent],
+  declarations: [LoginComponent, RegisterComponent, HomepageComponent, CheckoutPageComponent],
 
   imports: [
     FormsModule,
