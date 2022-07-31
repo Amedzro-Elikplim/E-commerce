@@ -1,24 +1,37 @@
-<nav class="nav">
-  <div>LOGO</div>
-  <mat-form-field class="search" appearance="outline">
-    <input class="input-field" matInput placeholder="Search..." />
-    <mat-icon class="search-icon" matSuffix>search</mat-icon>
-  </mat-form-field>
-  <ul class="nav-links">
-    <li>
-      <button mat-button [matMenuTriggerFor]="menu">
-        <mat-icon>person</mat-icon>
-        Menu
-     </button>
-      <mat-menu #menu="matMenu">
-        <button mat-menu-item>Login</button>
-        <button mat-menu-item>Logout</button>
-      </mat-menu>
-    </li>
-    <li>
-      <mat-icon class="cart-icon" matBadge="4" matBadgeColor="primary"
-        >shopping_cart</mat-icon
-      >
-    </li>
-  </ul>
-</nav>
+<mat-toolbar class="toolbar">
+  <div class="logo">
+    <button
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with menu icon"
+    >
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>SHOPRITE</span>
+  </div>
+
+  <div class="search-container">
+    <input type="text" class="input-field" placeholder="Search store...">
+    <button class="search-btn">Search</button>
+  </div>
+
+  <div class="controls">
+    <span class="example-spacer"></span>
+    <button mat-button [matMenuTriggerFor]="menu">
+      <mat-icon>person</mat-icon>
+      <span class="account-text">Account</span>
+    </button>
+    <mat-menu class="menu-dropdown" #menu="matMenu">
+      <button mat-menu-item>Login</button>
+      <button mat-menu-item>Logout</button>
+      <button mat-menu-item>Help ?</button>
+    </mat-menu>
+    <button
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with share icon"
+    >
+      <mat-icon  matBadge="4">shopping_cart</mat-icon>
+    </button>
+  </div>
+</mat-toolbar>
