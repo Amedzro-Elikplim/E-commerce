@@ -3,6 +3,7 @@ import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatBadgeModule } from '@angular/material/badge';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
@@ -21,6 +22,8 @@ import { CheckoutPageComponent } from './pages/checkout-page/checkout-page.compo
     MatInputModule,
     MatCheckboxModule,
     ReactiveFormsModule,
+    MatIconModule,
+    MatBadgeModule,
     AppRoutingModule
   ],
 })
