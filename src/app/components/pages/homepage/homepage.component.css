@@ -1,0 +1,31 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 1px 1px 5px gray;
+}
+
+.nav-links {
+    display: flex;
+    list-style-type: none;
+    gap: 20px;
+}
+
+.input-field {
+    outline: none !important;
+}
+
+.search {
+   margin-bottom: -20px;
+   width: 40vw;
+}
+
+.search-icon {
+    color: rgb(92, 58, 248);
+    cursor: pointer;
+}
+
+.cart-icon {
+    color: rgb(55, 55, 56);
+}
