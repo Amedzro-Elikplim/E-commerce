@@ -9,6 +9,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AppRoutingModule } from '../app-routing.module';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { HomepageComponent } from './pages/homepage/homepage.component';
 import { CheckoutPageComponent } from './pages/checkout-page/checkout-page.component';
 @NgModule({
@@ -23,6 +25,8 @@ import { CheckoutPageComponent } from './pages/checkout-page/checkout-page.compo
     MatCheckboxModule,
     ReactiveFormsModule,
     MatIconModule,
+    MatMenuModule,
+    MatToolbarModule,
     MatBadgeModule,
     AppRoutingModule
   ],
