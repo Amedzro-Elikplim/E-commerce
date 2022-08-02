@@ -11,7 +11,7 @@
     width: 35vw;
 }
 
-.login-image {
+.signup-image {
     width: 65vw;
     height: 100vh;
     background: url("../../../../assets/images/signup-image.jpg");
@@ -54,4 +54,25 @@
     color: rgb(111, 13, 238);
     cursor: pointer;
     text-decoration: none;
+}
+
+
+@media(max-width: 768px) {
+    .signup-container {
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    .signup-image {
+        width: 100%;
+        height: 50vh;
+    }
+
+    .signup-form {
+        width: 100%;
+    }
+    
+    .form-field {
+        width: 80%;
+    }
 }
