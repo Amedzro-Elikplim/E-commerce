@@ -36,6 +36,11 @@
   </div>
 </mat-toolbar>
 
+<div class="search-container-mobile">
+    <input type="text" [ngModel]="input_value" (ngModelChange)="handleChange($event)" class="input-field" placeholder="Filter by name...">
+    <button class="search-btn">Search</button>
+</div>
+
 <section class="product-section">
     <div class="list" *ngFor="let item of result">
       <div class="card">
