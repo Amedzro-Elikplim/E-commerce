@@ -1,15 +1,16 @@
 import { ProductServiceService } from './../../../services/product-service.service';
 import { Component, OnInit } from '@angular/core';
+import { saveToLocalStorage, getFromLocalStorage } from 'src/app/storage/localDB';
 
 @Component({
   selector: 'app-homepage',
   templateUrl: './homepage.component.html',
   styleUrls: ['./homepage.component.css'],
 })
-  
 export class HomepageComponent implements OnInit {
   data: any;
   result: any[] = [];
+  input_value: any;
 
   constructor(private productService: ProductServiceService) {}
 
@@ -17,6 +18,7 @@ export class HomepageComponent implements OnInit {
     let result = Math.random() * (max - min) + min;
     return '$' + result.toFixed(2);
   }
+
 
   cleanUpResponse(response: Object) {
     this.data = response;
@@ -31,12 +33,26 @@ export class HomepageComponent implements OnInit {
       };
 
       this.result.push(temp);
+      
     });
+
+    saveToLocalStorage(this.result);
   }
 
   ngOnInit(): void {
     this.productService.fetchProducts().subscribe((response) => {
-      this.cleanUpResponse(response)
+      this.cleanUpResponse(response);
     });
+  }
+
+  handleChange(e: any) {
+    if (e === '') {
+      return this.result = getFromLocalStorage();
+    }
+
+    this.result = this.result.filter((item) =>
+      item.name.toLowerCase().includes(e.toLowerCase())
+    );
+
   }
 }
