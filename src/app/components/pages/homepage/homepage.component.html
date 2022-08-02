@@ -11,7 +11,7 @@
   </div>
 
   <div class="search-container">
-    <input type="text" class="input-field" placeholder="Search store...">
+    <input type="text" [ngModel]="input_value" (ngModelChange)="handleChange($event)" class="input-field" placeholder="Search store...">
     <button class="search-btn">Search</button>
   </div>
 
