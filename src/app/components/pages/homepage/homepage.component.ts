@@ -1,30 +1,42 @@
-import { HttpClient } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { ProductServiceService } from './../../../services/product-service.service';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-homepage',
   templateUrl: './homepage.component.html',
-  styleUrls: ['./homepage.component.css']
+  styleUrls: ['./homepage.component.css'],
 })
-export class HomepageComponent {
-  data: any
-  result: any[] = []
-  temp: any
+  
+export class HomepageComponent implements OnInit {
+  data: any;
+  result: any[] = [];
 
-  constructor(http: HttpClient) { 
-     http
-      .get('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita')
-      .subscribe((response) => {
-        this.data = response
+  constructor(private productService: ProductServiceService) {}
 
-        this.data.drinks.map((item: any) => {
-          this.result.push({
-            name: item.strDrink,
-            image: item.strDrinkThumb
-          })
-        })
-        console.log(this.data);
-      });
-  };
+  generateRandomPrice(min: number, max: number) {
+    let result = Math.random() * (max - min) + min;
+    return '$' + result.toFixed(2);
+  }
 
+  cleanUpResponse(response: Object) {
+    this.data = response;
+
+    this.data.drinks.map((item: any) => {
+      const { strDrink, strDrinkThumb } = item;
+
+      const temp = {
+        name: strDrink,
+        image: strDrinkThumb,
+        price: this.generateRandomPrice(100, 1000),
+      };
+
+      this.result.push(temp);
+    });
+  }
+
+  ngOnInit(): void {
+    this.productService.fetchProducts().subscribe((response) => {
+      this.cleanUpResponse(response)
+    });
+  }
 }
