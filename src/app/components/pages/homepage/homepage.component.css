@@ -86,3 +86,20 @@
 .card-image {
     border-radius: 10px;
 }
+
+.info {
+    padding: 10px;
+}
+
+.info p {
+    font-size: 20px;
+    font-family: Raleway, sans-serif;
+}
+
+.info button {
+    background-color: rgb(92, 58, 248);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
