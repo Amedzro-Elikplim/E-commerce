@@ -11,15 +11,18 @@ export class HomepageComponent implements OnInit {
   data: any;
   result: any[] = [];
   input_value: any;
-  order: any[] = [];
+  order: any[] = getFromLocalStorage('orders') || [];
+  count: any;
 
-  constructor(private productService: ProductServiceService, private _snackBar: MatSnackBar) {}
+  constructor(
+    private productService: ProductServiceService,
+    private _snackBar: MatSnackBar
+  ) {}
 
   generateRandomPrice(min: number, max: number) {
     let result = Math.random() * (max - min) + min;
     return '$' + result.toFixed(2);
   }
-
 
   cleanUpResponse(response: Object) {
     this.data = response;
@@ -35,28 +38,32 @@ export class HomepageComponent implements OnInit {
       };
 
       this.result.push(temp);
-      
     });
 
-    saveToLocalStorage('products',this.result);
+    saveToLocalStorage('products', this.result);
+  }
+
+  getOrdersCount() {
+    let orders = getFromLocalStorage('orders')
+    this.count = orders ? orders.length : 0;
   }
 
   ngOnInit(): void {
     this.productService.fetchProducts().subscribe((response) => {
       this.cleanUpResponse(response);
     });
+
+    this.getOrdersCount();
   }
 
   handleChange(e: any) {
     if (e === '') {
-      return this.result = getFromLocalStorage('products');
+      return (this.result = getFromLocalStorage('products'));
     }
 
     this.result = this.result.filter((item) =>
       item.name.toLowerCase().includes(e.toLowerCase())
     );
-
-
   }
 
   displaySnackBar(item: any, message: string) {
@@ -70,12 +77,12 @@ export class HomepageComponent implements OnInit {
     const itemsInCart = getFromLocalStorage('orders') || [];
     itemsInCart.map((item: any) => {
       if (item.id === selected.id) {
-         status = true
-         return
+        status = true;
+        return;
       }
-    })
+    });
 
-    return status
+    return status;
   }
 
   placeOrder(id: string) {
@@ -88,6 +95,7 @@ export class HomepageComponent implements OnInit {
     }
 
     this.order.push(selected[0]);
+    this.count = this.order.length
     this.displaySnackBar(selected, ' added to cart');
     saveToLocalStorage('orders', this.order);
   }
