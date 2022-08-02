@@ -15,6 +15,7 @@ import { HomepageComponent } from './pages/homepage/homepage.component';
 import { CheckoutPageComponent } from './pages/checkout-page/checkout-page.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
+import { ProductServiceService } from '../services/product-service.service';
 @NgModule({
   declarations: [LoginComponent, RegisterComponent, HomepageComponent, CheckoutPageComponent],
 
@@ -34,6 +35,7 @@ import { BrowserModule } from '@angular/platform-browser';
     AppRoutingModule,
     HttpClientModule
   ],
+  providers: [ProductServiceService]
 })
 export class ComponentModule {
 
