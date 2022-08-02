@@ -1,9 +1,9 @@
-export function saveToLocalStorage(products: Object) {
-    localStorage.setItem('products', JSON.stringify(products));
+export function saveToLocalStorage(name: string, data: Object) {
+    localStorage.setItem(name, JSON.stringify(data));
 }
   
-export function getFromLocalStorage() {
-    const data: any = localStorage.getItem("products");
+export function getFromLocalStorage(name: string) {
+    const data: any = localStorage.getItem(name);
     return JSON.parse(data);
 }
 
