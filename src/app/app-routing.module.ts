@@ -6,9 +6,9 @@ import { HomepageComponent } from './components/pages/homepage/homepage.componen
 import { CheckoutPageComponent } from './components/pages/checkout-page/checkout-page.component';
 
 const routes: Routes = [
-  { path: 'login', component: LoginComponent },
+  { path: "", component: LoginComponent },
   { path: 'register', component: RegisterComponent },
-  { path: '', component: HomepageComponent },
+  { path: 'home', component: HomepageComponent },
   {path: 'checkout', component: CheckoutPageComponent}
 ];
 
