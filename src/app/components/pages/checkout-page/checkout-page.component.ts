@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { getFromLocalStorage } from 'src/app/storage/localDB';
+import { getFromLocalStorage, removeAllProducts } from 'src/app/storage/localDB';
 
 
 @Component({
@@ -20,6 +20,11 @@ export class CheckoutPageComponent implements OnInit {
 
   fetchOrders() {
     return getFromLocalStorage('orders');
+  }
+
+  clearAll() {
+    removeAllProducts()
+    this.orders = this.fetchOrders();
   }
 
 }
