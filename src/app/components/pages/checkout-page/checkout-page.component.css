@@ -65,18 +65,12 @@
 
     .checkout-form {
         margin-top: 20px;
-        width: 90%;
+        min-width: 90%;
         height: 50vh;
     }
 
-    /* .cards {
-        display: flex;
-        flex: 1 1 500px;
-        flex-wrap: wrap;
-    } */
-
     .checkout-card {
         margin: 10px;
-        width: 80%;
+        min-width: 80%;
     }
 }
