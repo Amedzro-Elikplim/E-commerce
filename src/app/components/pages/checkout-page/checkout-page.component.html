@@ -1,20 +1,19 @@
 <section>
-
 <div class="card">
-
-    <div>
-    <div  *ngFor="let order of orders">
-        <div class="checkout-card">
-            <img src="{{order.image}}" class="checkout-image" alt="images">
-            <div class="checkout-details">
-                <h2>{{order.name}}</h2>
-                <p>{{order.price}}</p>
-            </div>
-        </div>
+    <div class="cards">
+      <div  *ngFor="let order of orders">
+          <div class="checkout-card">
+              <img src="{{order.image}}" class="checkout-image" alt="images">
+              <div class="checkout-details">
+                  <h2>{{order.name}}</h2>
+                  <p>{{order.price}}</p>
+              </div>
+          </div>
+      </div>
     </div>
-    </div>
+   
 
-    <div>
+
    <form class="checkout-form">
 
     <mat-form-field appearance="outline" class="form-field">
@@ -43,7 +42,6 @@
 
     <button type="submit" mat-button class="checkout-button">Checkout</button>
   </form>
-</div>
  </div>
 
 </section>
