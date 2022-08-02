@@ -1,0 +1,50 @@
+<mat-toolbar class="toolbar" color="primary">
+  <div class="logo">
+    <button
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with menu icon"
+    >
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>SHOPRITE</span>
+  </div>
+
+  <div class="search-container">
+    <input type="text" [ngModel]="input_value" (ngModelChange)="handleChange($event)" class="input-field" placeholder="Filter by name...">
+    <button class="search-btn">Search</button>
+  </div>
+
+  <div class="controls">
+    <span class="example-spacer"></span>
+    <button mat-button [matMenuTriggerFor]="menu">
+      <mat-icon>person</mat-icon>
+    </button>
+    <mat-menu class="menu-dropdown" #menu="matMenu">
+      <button mat-menu-item routerLink="/login">Login</button>
+      <button mat-menu-item routerLink="/login">Logout</button>
+      <button mat-menu-item>Help ?</button>
+    </mat-menu>
+    <button
+      routerLink="/checkout"
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with share icon"
+    >
+      <mat-icon  matBadge="{{count}}" matBadgeColor="accent">shopping_cart</mat-icon>
+    </button>
+  </div>
+</mat-toolbar>
+
+<section class="product-section">
+    <div class="list" *ngFor="let item of result">
+      <div class="card">
+        <img class="card-image" src="{{item.image}}" alt="images">
+        <div class="info">
+          <p>{{item.name}}</p>
+          <p>{{item.price}}</p>
+          <button (click)="placeOrder(item.id)">ADD TO CART</button>
+        </div>
+      </div>
+    </div>
+</section>

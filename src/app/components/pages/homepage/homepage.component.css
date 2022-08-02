@@ -1,0 +1,108 @@
+.toolbar {
+    justify-content: space-between;
+    box-shadow: 1px 1px 5px gray;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.input-field {
+   padding: 10px 10px;
+   width: 40vw;
+   border: 1px solid rgb(170, 168, 168);
+   outline: none;
+   border-radius: 5px;
+   font-size: 18px;
+}
+
+.search-btn {
+    padding: 10px 0px;
+    width: 10vw;
+    border: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 18px;
+    background-color: rgb(247, 107, 160);
+    color: white;
+}
+
+
+.search-icon {
+    color: rgb(92, 58, 248);
+    cursor: pointer;
+}
+
+.cart-icon {
+    color: rgb(55, 55, 56);
+}
+
+.search {
+   margin-bottom: -20px;
+   width: 40vw;
+   background-color: white;
+}
+
+
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.account-text {
+    font-size: 15px;
+    font-family: Raleway, sans-serif;
+}
+
+.product-section {
+    display: grid;
+    padding: 30px;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px;
+}
+
+
+.list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    border-radius: 10px;
+    border: 1px solid rgb(218, 215, 215);
+    width: 17rem;
+    
+}
+
+.card-image {
+    border-radius: 10px;
+    width: 100%;
+}
+
+.info {
+    padding: 10px;
+}
+
+.info p {
+    font-size: 20px;
+    font-family: Raleway, sans-serif;
+}
+
+.info button {
+    background-color: rgb(92, 58, 248);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
