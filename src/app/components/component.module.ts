@@ -13,10 +13,13 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { HomepageComponent } from './pages/homepage/homepage.component';
 import { CheckoutPageComponent } from './pages/checkout-page/checkout-page.component';
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserModule } from '@angular/platform-browser';
 @NgModule({
   declarations: [LoginComponent, RegisterComponent, HomepageComponent, CheckoutPageComponent],
 
   imports: [
+    BrowserModule,
     FormsModule,
     MatButtonModule,
     MatFormFieldModule,
@@ -28,7 +31,8 @@ import { CheckoutPageComponent } from './pages/checkout-page/checkout-page.compo
     MatMenuModule,
     MatToolbarModule,
     MatBadgeModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
 })
 export class ComponentModule {
