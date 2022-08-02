@@ -35,6 +35,18 @@
     font-family: Raleway, sans-serif;
 }
 
+.clear-button {
+  background-color: rgb(92, 58, 248);
+  color: white;
+  width: 100px;
+  margin: 70px;
+  border: none;
+  outline: none;
+  width: 200px;
+  height: 50px;
+  font-size: larger;
+}
+
 .checkout-form {
     display: flex;
     justify-content: center;
@@ -73,4 +85,5 @@
         margin: 10px;
         min-width: 80%;
     }
+
 }
