@@ -80,11 +80,13 @@
 .card {
     border-radius: 10px;
     border: 1px solid rgb(218, 215, 215);
+    width: 17rem;
     
 }
 
 .card-image {
     border-radius: 10px;
+    width: 100%;
 }
 
 .info {
@@ -102,4 +104,5 @@
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
+    cursor: pointer;
 }
