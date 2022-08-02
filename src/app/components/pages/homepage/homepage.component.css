@@ -31,7 +31,7 @@
     cursor: pointer;
     border-radius: 5px;
     font-size: 18px;
-    background-color: rgb(92, 58, 248);;
+    background-color: rgb(247, 107, 160);
     color: white;
 }
 
@@ -61,4 +61,28 @@
 .account-text {
     font-size: 15px;
     font-family: Raleway, sans-serif;
+}
+
+.product-section {
+    display: grid;
+    padding: 30px;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px;
+}
+
+
+.list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    border-radius: 10px;
+    border: 1px solid rgb(218, 215, 215);
+    
+}
+
+.card-image {
+    border-radius: 10px;
 }
