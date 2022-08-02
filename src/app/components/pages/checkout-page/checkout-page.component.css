@@ -1,0 +1,55 @@
+.card {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px;
+  box-shadow: 0px 0px 1px gray;
+  width: 80vw;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 10px;
+}
+
+.checkout-card {
+    display: flex;
+    border-bottom: 1px solid rgb(179, 179, 179);
+    width: 30vw;
+    padding: 10px;
+}
+
+
+.checkout-image {
+    width: 100px;
+    border-radius: 5px;
+}
+
+.checkout-details {
+   padding: 20px;
+}
+
+.checkout-details h2 {
+    font-family: Raleway, sans-serif;
+}
+
+.checkout-card p {
+    font-family: Raleway, sans-serif;
+}
+
+.checkout-form {
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.form-field {
+    width: 300px;
+}
+
+.checkout-button {
+  background-color: rgb(92, 58, 248);
+  color: white;
+  width: 150px;
+  margin-top: 50px;
+}
