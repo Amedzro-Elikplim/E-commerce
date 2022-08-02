@@ -1,0 +1,57 @@
+
+.login-container {
+    display: flex;
+}
+
+.login-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 35vw;
+}
+
+.login-image {
+    width: 65vw;
+    height: 100vh;
+    background: url("../../../../assets/images/login-image.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.checkbox {
+    margin: 10px;
+    width: 25vw;
+    color: gray;
+}
+
+.login-button {
+  background-color: rgb(92, 58, 248);
+  color: white;
+  width: 150px;
+  margin-top: 50px;
+}
+
+.form-field {
+    width: 25vw;
+    margin: 10px;
+}
+
+.input {
+   width: 100%;
+} 
+
+.icon {
+    color: rgb(111, 13, 238);
+}
+
+.prompt {
+    margin: 10px;
+}
+
+.signup-text {
+    color: rgb(111, 13, 238);
+    cursor: pointer;
+    text-decoration: none;
+}
