@@ -7,4 +7,8 @@ export function getFromLocalStorage(name: string) {
     return JSON.parse(data);
 }
 
+export function removeAllProducts() {
+    localStorage.clear();
+};
+
 
